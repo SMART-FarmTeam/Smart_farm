@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout/default_layout}">
+
+	<head>
+		<title>Phantom by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link th:href="@{/css/main.css}" rel="stylesheet" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+				
+				<!-- Header -->
+					<div th:replace="/fragments/header.html"></div>
+
+				<!-- Menu -->
+					<div th:replace="/fragments/nav.html"></div>
+
+				<!-- Main -->
+					<div th:replace="@{/contents/{menu}.html(menu=${menu})}"></div>
+					
+
+				<!-- Footer -->
+					<div th:replace="/fragments/footer.html"></div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+			<script type="text/javascript" th:src="@{/js/browser.min.js}"></script>
+			<script type="text/javascript" th:src="@{/js/breakpoints.min.js}"></script>
+			<script type="text/javascript" th:src="@{/js/util.js}"></script>
+			<script type="text/javascript" th:src="@{/js/main.js}"></script>
+			
+
+
+	</body>
+</html>
